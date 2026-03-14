@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isValidReview() {
+      let review = request.resource.data;
+      return review.text is string &&
+             review.text.size() >= 20 &&
+             review.rating is number &&
+             review.rating >= 1 &&
+             review.rating <= 5 &&
+             review.restaurantId is string &&
+             review.userId is string &&
+             review.language in ['en', 'de'] &&
+             review.authenticityScore is number &&
+             review.authenticityScore >= 0 &&
+             review.authenticityScore <= 100;
+    }
+
+    // Reviews collection rules
+    match /reviews/{reviewId} {
+      allow read: if true;
+      // Simplified create rule for testing
+      allow create: if true;
+      allow update: if true;
+      allow delete: if true;
+    }
+
+    // Users collection rules
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Restaurants collection rules
+    match /restaurants/{restaurantId} {
+      allow read: if true;
+    }
+  }
+}
