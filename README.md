@@ -1,6 +1,6 @@
 # GastroTurst WebApp
 
-GastroTrust is a public repository owned by [Vineet-10](https://github.com/Vineet-10), built with TypeScript. The repository was created to use the Human Centered Artifical Intelligence (HCAI) principles to enhance restaurant review authenticity, integrating machine learning algorithms for sentiment analysis and review scoring. Led backend architecture development with Python, optimised models through hyper-parameter tuning, and implemented scalable real-time data processing.. 
+GastroTrust is a public repository built with TypeScript. The repository was created to use the Human Centered Artifical Intelligence (HCAI) principles to enhance restaurant review authenticity, integrating machine learning algorithms for sentiment analysis and review scoring. Led backend architecture development with Python, optimised models through hyper-parameter tuning, and implemented scalable real-time data processing.. 
 
 > **Note:** The project details and specific functionality are currently not described in the repository.
 
@@ -36,8 +36,6 @@ This project does not currently specify a license. Please contact the repository
 
 ## Contact
 
-For questions, reach out to the repository owner on [GitHub](https://github.com/Vineet-10).
+For questions, reach out to the repository owner on [GitHub]([https://github.com/pseudo](https://github.com/pseudo9)).
 
 
-
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/kartik-gadhvi/sb1-3z7ahi)
